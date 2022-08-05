@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 15px;
+}
+
+main {
+  max-width: 60%;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 15px 5px;
+}
+form input {
+  margin: 5px 0;
+  padding: 8px;
+  border: solid 1px #ddd;
+}
+form input:focus {
+  outline: none;
+  background-color: rgb(245, 245, 245);
+}
+form button {
+  padding: 5px;
+  cursor: pointer;
+}
+form button:active {
+  transform: scale(0.97);
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 15px;
+  border-left: solid 1px #ddd;
+}
+ul li {
+  padding: 8px 16px;
+  width: 200px;
+  border-bottom: solid 1px #ddd;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+ul li::before {
+  content: "- ";
+}
+
+a {
+  margin: 0 5px;
+  border-radius: 0 0 5px 5px;
+  display: block;
+  background-color: cornflowerblue;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+a:hover {
+  background-color: rgb(93, 137, 218);
+}
+
+.forms {
+  display: flex;
+}
+
+.message {
+  margin: 5px;
+  background-color: rgba(0, 128, 0, 0.795);
+  color: #fff;
+  padding: 8px 16px;
+  width: 97.5%;
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  transition: all 0.4s ease-in;
+}
+.message.hidden {
+  display: none;
+}
+
+h2 {
+  width: 200px;
+  color: #333;
+  margin: 10px 0 -10px;
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */
