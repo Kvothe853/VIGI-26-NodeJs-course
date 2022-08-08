@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="add.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <div>
+          <h2>Create User</h2>
+          <div>
+            <label for="userIdCreate">User ID</label>
+            <input type="number" name="userId" id="userIdCreate" />
+          </div>
+          <div>
+            <label for="titleCreate">Title</label>
+            <input type="text" name="title" id="titleCreate" />
+          </div>
+          <div>
+            <label for="bodyCreate">Body</label>
+            <input type="text" name="body" id="bodyCreate" />
+          </div>
+        </div>
+        <button type="submit">Create</button>
+      </form>
+      <form>
+        <h2>Update User</h2>
+        <div>
+          <label for="userIdUpdate">Select Id</label>
+          <input
+            type="number"
+            name="userId"
+            id="userIdUpdate"
+            min="1"
+            max="100"
+            value="1"
+          />
+        </div>
+        <div>
+          <label for="titleUpdate">Title</label>
+          <input type="text" name="title" id="titleUpdate" />
+        </div>
+        <div>
+          <label for="bodyUpdate">Body</label>
+          <input type="text" name="body" id="bodyUpdate" />
+        </div>
+        <div>
+          <label for="userIdIdUpdate">User Id</label>
+          <input type="number" name="userIdIdUpdate" id="userIdIdUpdate" />
+        </div>
+        <button type="submit">Update</button>
+      </form>
+    </main>
+  </body>
+</html>
