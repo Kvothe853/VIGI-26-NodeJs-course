@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Pet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <style></style>
+    <script src="add.js" defer></script>
+  </head>
+  <body>
+    <a href="index.html">View pets</a>
+    <form>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" />
+      </div>
+      <div>
+        <label for="typs">Typs:</label>
+        <select name="typs" id="typs">
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bunny">Bunny</option>
+        </select>
+      </div>
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>

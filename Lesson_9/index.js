@@ -9,13 +9,17 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = process.env.PORT || 8080;
-const URI = `mongodb+srv://root:${process.env.PASSWORD}@lesson7.kfefyzq.mongodb.net/?retryWrites=true&w=majority`;
+const URI = `mongodb+srv://root:${process.env.PASSWORD}@cluster0.cvc9hji.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(URI);
 
-app.get("/", async (req, res) => {
+app.get("/categories", async (req, res) => {
   try {
     const con = await client.connect();
-    const data = await con.db("Lesson7").collection("people").find().toArray();
+    const data = await con
+      .db("demo4")
+      .collection("categories")
+      .find()
+      .toArray();
     await con.close();
     return res.send(data);
   } catch (err) {
@@ -23,16 +27,21 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/", async (req, res) => {
+app.get("/products", async (req, res) => {
   try {
     const con = await client.connect();
-    const dbRes = await con.db("Lesson7").collection("people").insertOne({
-      name: req.body.name,
-      surname: req.body.surname,
-      age: req.body.age,
-    });
+    // const data = await con
+    //   .db("demo4")
+    //   .aggregate([
+    //     { $match: {} },
+    //     { $group: { _id: "$name", title: "$title" } },
+    //   ]);
+
+    const data = await con
+      .db("demo4")
+      .aggregate([{ $group: { _id: "$name" } }]);
     await con.close();
-    return res.send(dbRes);
+    return res.send(data);
   } catch (err) {
     res.status(500).send({ err });
   }

@@ -1,0 +1,16 @@
+db.name.count({product: "thoothbrush"}); - grazina number kiek yra parduota sepeteliu
+db.name.distinct("product"); - grazina array su visais parduotais dalykais (visus skirtingus)
+db.name.aggregate(
+	[
+		{$match: {} },
+		{group: {_id "$customer", total: {$sum: "$total"}} }
+	]
+) - grazina array su zmoniu vardais pagal id. Kartu grazina ir kiek jie isleido isviso
+
+db.name.aggregate(
+	[
+		{$match: {customer: {$in: ["Mike", "Karen"]}} },
+		{group: {_id "$product", total: {$sum: "$total"}} },
+		{$sort: {total: -1}}
+	]
+) - grazina array su produktais ir kiek uz juos buvo isleista pinigu
