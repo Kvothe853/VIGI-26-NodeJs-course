@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memberships</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="addMembership.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/6658f3e60f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="memberships.html" class="active">Memberships</a>
+      <a href="users.html">Users</a>
+    </nav>
+    <main>
+      <h1 class="topic">Create Membership</h1>
+      <form class="createMembership">
+        <div class="createMembershipContainer">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" />
+          </div>
+          <div>
+            <label for="price">Membership Price $</label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              step="0.01"
+              placeholder="Membership Price"
+            />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div>
+            <!-- <label for="idInput">ID</label> -->
+            <input
+              type="hidden"
+              name="idInput"
+              id="idInput"
+              title="ID is generated automatically"
+              disabled
+            />
+          </div>
+
+          <div class="submitNewMembership">
+            <a href="memberships.html">Cancel</a>
+            <button type="submit">New Membership</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

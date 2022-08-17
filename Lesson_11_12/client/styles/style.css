@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  color: #333;
+  background-color: #d9e5eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  min-width: 520px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+nav a {
+  font-weight: 600;
+  padding: 16px;
+  color: #333;
+  letter-spacing: 0.01rem;
+}
+nav a.active {
+  color: #677dea;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+main .new-membership {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+main .new-membership h1 {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+main .new-membership div:first-child {
+  flex: 2;
+}
+main .new-membership div:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+main .new-membership a {
+  background-color: #677dea;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+main .topic {
+  margin: 15px 0;
+  font-weight: 400;
+}
+main .memberships-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main .memberships-container .box {
+  width: calc(33.3333333333% - 30px);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+main .memberships-container .box .membership-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+main .memberships-container .box .membership-info h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+main .memberships-container .box .membership-info p {
+  font-size: 12px;
+  letter-spacing: 0.02rem;
+}
+main .memberships-container .box .delete-membership-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-top: solid 1px #eee;
+}
+main .memberships-container .box .delete-membership-box button {
+  margin: 20px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fae3e8;
+  cursor: pointer;
+}
+main .memberships-container .box .delete-membership-box button:hover {
+  background-color: #e9d2d7;
+}
+main .memberships-container .box .delete-membership-box button i {
+  color: #f86464;
+}
+
+.createMembership {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.createMembership .createMembershipContainer {
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 60%;
+}
+.createMembership .createMembershipContainer div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+.createMembership .createMembershipContainer div:last-child {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.createMembership .createMembershipContainer div:last-child a {
+  color: #000;
+  margin-right: 15px;
+}
+.createMembership .createMembershipContainer div:last-child button {
+  background-color: #677dea;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+}
+.createMembership .createMembershipContainer div:last-child button:hover {
+  background-color: #6378e0;
+}
+.createMembership .createMembershipContainer div ::-moz-placeholder {
+  letter-spacing: 0.02rem;
+}
+.createMembership .createMembershipContainer div :-ms-input-placeholder {
+  letter-spacing: 0.02rem;
+}
+.createMembership .createMembershipContainer div ::placeholder {
+  letter-spacing: 0.02rem;
+}
+.createMembership .createMembershipContainer div label {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: bold;
+}
+.createMembership .createMembershipContainer div input {
+  flex: 3;
+  padding-left: 20px;
+  min-width: 269.25px;
+}
+.createMembership .createMembershipContainer div input:focus {
+  outline: none;
+}
+.createMembership .createMembershipContainer div textarea {
+  flex: 3;
+  padding: 20px;
+  margin-left: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  resize: vertical;
+}
+.createMembership .createMembershipContainer div textarea:focus {
+  outline: none;
+}
+.createMembership .createMembershipContainer input {
+  height: 40px;
+}
+.createMembership .createMembershipContainer input,
+.createMembership .createMembershipContainer textarea {
+  width: 100%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.sortingUsersContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sortingUsersContainer .sortingUsers {
+  font-weight: bold;
+  cursor: pointer;
+}
+.sortingUsersContainer span {
+  color: #677dea;
+  margin-left: 10px;
+  padding-left: 10px;
+  position: relative;
+  font-size: 12px;
+}
+.sortingUsersContainer span::before {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: rgb(123, 123, 123);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.users-container {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.users-container .box {
+  width: calc(33.3333333333% - 30px);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  padding: 15px;
+  margin: 15px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.users-container .box a {
+  color: #677dea;
+}
+.users-container .box .fullNameDiv {
+  margin-bottom: 25px;
+  color: #a2afc1;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+  font-size: 16px;
+}
+.users-container .box div:not(:first-child) {
+  margin: 15px 0;
+}
+.users-container .box div {
+  font-size: 14px;
+}
+.users-container .box div span {
+  color: #677dea;
+}
+
+.addUserContainer {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.addUserContainer form {
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.addUserContainer form input {
+  height: 40px;
+  padding-left: 20px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.addUserContainer form input:focus {
+  outline: none;
+}
+.addUserContainer form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.addUserContainer form label::before {
+  content: "*";
+  color: orange;
+  font-size: 20px;
+  position: absolute;
+  right: -12px;
+  top: 0.5px;
+}
+.addUserContainer form label[for=membership]::before {
+  content: none;
+}
+.addUserContainer form .fullName {
+  display: flex;
+  width: 100%;
+}
+.addUserContainer form .fullName div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.addUserContainer form .emailInput {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-right: 30px;
+}
+.addUserContainer form .emailInput input {
+  width: 100%;
+}
+.addUserContainer form .membershipInput {
+  margin: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.addUserContainer form .membershipInput select {
+  width: 50%;
+  height: 40px;
+  border: none;
+  padding-left: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.addUserContainer form .membershipInput select:focus {
+  outline: none;
+}
+.addUserContainer form div {
+  display: flex;
+  padding: 10px 15px;
+}
+.addUserContainer .addUserButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.addUserContainer .addUserButton a {
+  color: #000;
+  margin-right: 15px;
+}
+.addUserContainer .addUserButton button {
+  background-color: #677dea;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  letter-spacing: 0.03rem;
+  cursor: pointer;
+}
+.addUserContainer .addUserButton button:hover {
+  background-color: #6378e0;
+}
+
+@media screen and (max-width: 1125px) {
+  main .new-membership {
+    padding: 15px 5px;
+  }
+  main .new-membership p {
+    margin: 15px 0;
+  }
+  main .memberships-container,
+main .users-container {
+    justify-content: space-between;
+  }
+  main .memberships-container .box,
+main .users-container .box {
+    width: calc(50% - 10px);
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .addUserContainer form .fullName {
+    flex-direction: column;
+  }
+  .addUserContainer form .fullName div {
+    padding: 0;
+    margin: 15px 0;
+  }
+  .addUserContainer form .emailInput {
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+  }
+  .addUserContainer form .membershipInput {
+    width: 100%;
+    padding: 0;
+  }
+  .addUserContainer form .membershipInput select {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 720px) {
+  main .new-membership {
+    padding: 5px;
+    margin: 15px 0;
+  }
+  main .new-membership div {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .new-membership p {
+    text-align: center;
+    margin: 15px 0;
+  }
+  main .memberships-container .box,
+main .users-container .box {
+    width: 100%;
+    margin: 5px;
+  }
+  main .topic {
+    width: 100%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
