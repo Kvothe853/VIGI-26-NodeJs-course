@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="add.js" defer></script>
+  <body>
+    <form>
+      <div>
+        <label for="brand">Brand</label>
+        <input type="text" name="brand" id="brand" />
+      </div>
+      <div>
+        <label for="model">Model</label>
+        <input type="text" name="model" id="model" />
+      </div>
+      <div>
+        <label for="size">Size</label>
+        <select name="size" id="size">
+          <option value="s">S</option>
+          <option value="m">M</option>
+          <option value="L">L</option>
+          <option value="xl">XL</option>
+        </select>
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" step="0.01" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form id="register">
+      <input type="email" name="email" placeholder="Email..." />
+      <input type="password" name="password" placeholder="Password" />
+      <button type="submit">Register</button>
+    </form>
+    <script>
+      // Javascript
+      const form = document.forms[0];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const emailInput = document.querySelector("input[name='email']");
+        const passwordInput = document.querySelector("input[name='password']");
+
+        const newUser = {
+          email: emailInput.value,
+          password: passwordInput.value,
+        };
+
+        const options = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        };
+
+        emailInput.value = "";
+        passwordInput.value = "";
+
+        fetch("http://localhost:3000/auth/register", options)
+          .then((resp) => resp.json())
+          .then((data) => {
+            console.log("User Created");
+            const successMessage = document.createElement("p");
+            successMessage.style.color = "green";
+            successMessage.textContent = "User Create";
+            document.body.append(successMessage);
+          })
+          .catch((err) => console.error(err));
+      });
+    </script>
+  </body>
+</html>

@@ -14,16 +14,21 @@ const mysqlConfig = {
   port: "25060",
 };
 
+const PORT = 8080;
+
 app.get("/", async (req, res) => {
   try {
     const con = await mysql.createConnection(mysqlConfig);
-    console.log("Success: " + con);
+    console.log("Success :" + con);
+
+    con.execute("");
     await con.end();
+    res.send("Success");
   } catch (e) {
     console.log(e);
   }
 });
 
-app.listen(25060, () => {
-  console.log(`http://localhost:25060`);
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT}`);
 });
