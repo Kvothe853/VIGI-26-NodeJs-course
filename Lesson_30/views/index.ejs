@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+    <main>
+      <h1>Most Popular Bars</h1>
+      <section class="bars-container">
+        <% for (let i = 0; i < bars.length; i++) { %>
+        <div class="bar">
+          <div class="bar-image">
+            <img src="<%= bars[i].image %>" alt="" />
+          </div>
+          <div class="bar-information">
+            <h3><%= bars[i].name %></h3>
+            <p><%= bars[i].adress %></p>
+          </div>
+          <div class="bar-reviews">
+            <!-- // stars review  -->
+            <div class="stars">
+              <% for (let j = 0; j < bars[i].stars_review; j++) { %>
+              <i class="fa-solid fa-star"></i>
+              <% } %>
+              <!-- / -->
+              <% for (let k = 0; k < 5 - bars[i].stars_review; k++) { %>
+              <i class="fa-regular fa-star"></i>
+              <% } %>
+            </div>
+            <!-- // price review  -->
+            <div class="price">
+              <% for (let j = 0; j < bars[i].price_review; j++) { %>
+              <i class="fa-solid fa-dollar-sign red"></i>
+              <% } %>
+              <!-- / -->
+              <% for (let k = 0; k < 5 - bars[i].price_review; k++) { %>
+              <i class="fa-regular fa-dollar-sign grey"></i>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </section>
+    </main>
+  </body>
+  <% include partials/script %>
+</html>

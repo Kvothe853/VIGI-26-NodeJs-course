@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include partials/head %>
+  </head>
+  <body>
+    <section class="articles-container">
+      <h1>News</h1>
+      <% for (let i = 0; i < articles.length; i++) { %>
+      <div class="article">
+        <div class="image-container">
+          <img src="<%= articles[i].image_url %>" alt="" />
+        </div>
+        <div class="content-container">
+          <div class="title">
+            <h2><%= articles[i].title %></h2>
+          </div>
+          <div class="content">
+            <p><%= articles[i].description %></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </section>
+  </body>
+  <script>
+    // const rows = "<%= JSON.stringify(articles)%>";
+    // const test = JSON.parse(rows);
+    // console.log(rows);
+  </script>
+  <% include partials/script %>
+</html>
