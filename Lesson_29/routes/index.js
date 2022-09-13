@@ -12,6 +12,8 @@ router.get("/", async function (req, res, next) {
     res.render("index", {
       page: "Home",
       menuId: "home",
+      title: "Static Website | Home",
+      header: "News",
       articles: data,
     });
 
